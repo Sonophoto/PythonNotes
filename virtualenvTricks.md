@@ -70,7 +70,7 @@ _Note there is_ ***NO*** 'g' _on the end of these directory names and prompt str
       ln ~/.v34/bin/activate ~/.P34
       ln ~/.v27/bin/activate ~/.P27
 
-***Now from anywhere we are we can use one of four python virtual environments by saying:
+***Now from anywhere we are we can use one of four python virtual environments by saying:***
 
         $> source ~/.P3g  # Now we are in a virtual 3.4 environment
                             with ALL of our version 3.4 system libraries
@@ -97,9 +97,11 @@ _Note there is_ ***NO*** 'g' _on the end of these directory names and prompt str
         
         ... and we are back at the system's version which can be whatever, we don't care ;-)
 
-If you wish, you can configure your shell with aliases for all of this, now you have a CLI API
+If you wish, you can configure your shell with aliases for all of this, now you have a CLI API for virtualenv***
 
-Add these commands to you ~/.profile
+Add these commands to you ~/.bashrc 
+   
+   (Note, you can skip a step and include the bin/activate paths above if you like)
 
        alias py2g='source ~/.P2g'
        
