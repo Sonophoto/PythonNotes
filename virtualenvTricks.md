@@ -48,7 +48,7 @@ libraries automagiacally! ***Or*** lets you use a bare environment and only
 add what you want at the moment...
                                         ...and change your mind later!
 
-***_It Unixishy!_*** (hard to type, easy to forget, utterly cryptic...)
+             ***_It Unixishy!_*** (hard to type, easy to forget, utterly cryptic...)
 
 ***In my home directory I created four virtualenv directories:***
 
@@ -81,12 +81,10 @@ _Note there is_ ***NO*** 'g' _on the end of these directory names and prompt str
         $> pip freeze
         [system_libraries]
        
-Now lets switch to Python 2.7 with a bare system (no libraries installed)
+***Now lets switch to Python 2.7 with a bare system (no libraries installed)***
 
         $> deactivate     # Leave the Python 3.4 virtual environment, 
                             System's default Python is restored
-        
-                            
         $> source ~/.P27  # Now we are in a virtual Python 2.7
                             with NO system libraries
         $> python --version
@@ -98,7 +96,8 @@ Now lets switch to Python 2.7 with a bare system (no libraries installed)
         $> deactivate
         
         ... and we are back at the system's version which can be whatever, we don't care ;-)
-        
+       
+ 
 ***NOTE!*** Your project DOES NOT have to be in the .vxxg or .vxx directories it can be anywhere...
 
 ***BUT:*** Remember, your "no library" versions will come back up with whatever libraries you do
