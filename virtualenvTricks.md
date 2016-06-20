@@ -48,7 +48,7 @@ libraries automagiacally! ***Or*** lets you use a bare environment and only
 add what you want at the moment...
                                         ...and change your mind later!
 
-             ***_It Unixishy!_*** (hard to type, easy to forget, utterly cryptic...)
+             It Unixishy!    (hard to type, easy to forget, utterly cryptic...)
 
 ***In my home directory I created four virtualenv directories:***
 
@@ -96,8 +96,25 @@ _Note there is_ ***NO*** 'g' _on the end of these directory names and prompt str
         $> deactivate
         
         ... and we are back at the system's version which can be whatever, we don't care ;-)
+
+If you wish, you can configure your shell with aliases for all of this, now you have a CLI API
+
+Add these commands to you ~/.profile
+
+       alias py2g='source ~/.P2g'
        
- 
+       alias py3g='source ~/.P3g'
+       
+       alias py27='source ~/.P27'
+       
+       alias py34='source ~/.P34'
+       
+       alias dvirt='deactivate'
+
+***try:***
+
+      py34 && dvirt && py27 && dvirt && py2g && dvirt && py3g && dvirt
+
 ***NOTE!*** Your project DOES NOT have to be in the .vxxg or .vxx directories it can be anywhere...
 
 ***BUT:*** Remember, your "no library" versions will come back up with whatever libraries you do
