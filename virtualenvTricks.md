@@ -113,7 +113,14 @@ Add these commands to you ~/.profile
 
 ***try:***
 
-      py34 && dvirt && py27 && dvirt && py2g && dvirt && py3g && dvirt
+      py34
+      dvirt
+      py27
+      dvirt
+      py2g
+      dvirt
+      py3g
+      dvirt
 
 ***NOTE!*** Your project DOES NOT have to be in the .vxxg or .vxx directories it can be anywhere...
 
