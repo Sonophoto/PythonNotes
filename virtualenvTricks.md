@@ -3,18 +3,23 @@
 ***Full Disclosure (YMMV):***
 
 _virtualenv_
+
       --version: 15.0.2
       
 _Mint 17.1 MATE_
+
       uname: Linux [hostname] 3.13.0-37-generic #64-Ubuntu SMP [datetime] i686 athlon i686 GNU/Linux
       
 _Python 2.7 Package Installed_ 
+
       --version: Python 2.7.6
       
 _Python 3.4 Package Installed_
+
       --version: Python 3.4.3
       
 _using /bin/bash -l_
+
       --version: GNU bash, version 4.3.11(1)-release
       
 (Yes, this may make _you_ yawn, but I think this is the coolest thing since Algol.)
