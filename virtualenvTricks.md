@@ -97,9 +97,9 @@ _Note there is_ ***NO*** 'g' _on the end of these directory names and prompt str
         
         ... and we are back at the system's version which can be whatever, we don't care ;-)
 
-If you wish, you can configure your shell with aliases for all of this, now you have a CLI API for virtualenv***
+***If you wish, you can configure your shell with aliases for all of this, now you have a CLI API for virtualenv***
 
-Add these commands to you ~/.bashrc 
+Add these commands to your ~/.bashrc 
    
    (Note, you can skip a step and include the bin/activate paths above if you like)
 
@@ -113,16 +113,16 @@ Add these commands to you ~/.bashrc
        
        alias dvirt='deactivate'
 
-***try:***
+***Now try:***
 
-      py34
-      dvirt
-      py27
-      dvirt
-      py2g
-      dvirt
-      py3g
-      dvirt
+      $> py34
+      $> dvirt
+      $> py27
+      $> dvirt
+      $> py2g
+      $> dvirt
+      $> py3g
+      $> dvirt
 
 ***NOTE!*** Your project DOES NOT have to be in the .vxxg or .vxx directories it can be anywhere...
 
