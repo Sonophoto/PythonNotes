@@ -29,9 +29,10 @@ _using /bin/bash -l_
 
       --version: GNU bash, version 4.3.11(1)-release
       
-(Yes, this may make _you_ yawn, but I think this is the coolest thing since Algol.)
 
 ***USE CASE:*** 
+
+(Yes, this may make _you_ yawn, but I think this is the coolest thing since Algol.)
 
 Learning both Python 2.7 and Python 3.4 is a pain. Naturally we want to 
 act as if the version we are using is the actual system version without all of 
