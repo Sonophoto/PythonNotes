@@ -124,8 +124,11 @@ Add these commands to your ~/.bashrc
 ***BUT:*** Remember, your "no library" versions will come back up with whatever libraries you do
 install in them if you do not explicitly delete them with pip... 
 
-To maintain a specific virtual environment you should create a specific setup of virtualenv just
-for your project and keep all of your files in THAT directory with your requirements.txt etc.
-Activate this specific environment to work on that specific project.
+To maintain a virtual environment for a specific project, you should create a virtualenv just
+for that project and keep all of your files in _that_ directory with your requirements.txt etc.
+Activate _that_ specific environment to work on _that_ specific project in _that_ specific 
+directory and then deactivate it before moving to the next project. You can of course use this
+technique to setup your project with a start and stop command.
+
         
-#It Works Great!
+#Enjoy! It Works Great!
