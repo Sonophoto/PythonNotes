@@ -29,34 +29,30 @@ _using /bin/bash -l_
 
 (Yes, this may make _you_ yawn, but I think this is the coolest thing since Algol.)
 
-Learning both Python 2.7 and Python 3.4 is a pain. Naturally we want to 
-act as if the version we are using is the actual system version without all of 
-the hassle of typing numbers after all of our commands and the hassle of system
-and version conflicts with Python libraries.
+Python 3.x is here to stay! It is definitely worth the effort to learn the up-to-date
+version! Python 3.x has more consistency in language syntax and enhanced functionality.
+Don't wait until the last minute, Python 2.7 goes EOL in less than 4 years...
 
-Python 3.x is here to stay! It is definitely worth the effort with more consistency
-in language syntax and enhanced functionality.
+Learning both Python 2.7 and Python 3.4 is a pain. We want to work like the version 
+we are using is the built-in system version so we don't have to add numbers to the
+ends of our commands. We also want to avoid any delays fighting with mismatched 
+libraries our language version conflicts.
+
+***Solution***
 
 These "Macros" make it much easier to use whichever version you wish and change 
 from minute to minute! This method INCLUDES your regular installed system 
-libraries automagiacally! ***Or*** lets you use a bare environment and only 
-add what you want at the moment...
-                                        ...and change your mind later!
+libraries automagiacally! ***Or*** it lets you use a bare environment and only 
+add libraries that you need for the task at hand. 
 
-             It Unixishy!    (hard to type, easy to forget, utterly cryptic...)
+             It Unixishy!    (hard to type, easy to forget, utterly cryptic ...lulz)
 
 ***In my home directory I created four virtualenv directories:***
 
-_Note the_ ***'g'*** _on the end of these directory names and prompt strings!_
-
       virtualenv --system-site-packages --prompt="VIRTUAL-34g " --python=/usr/bin/python3.4 ~/.v34g/
       virtualenv --system-site-packages --prompt="VIRTUAL-27g " --python=/usr/bin/python2.7 ~/.v27g/
-
-_Note there is_ ***NO*** 'g' _on the end of these directory names and prompt strings!_
-
       virtualenv --prompt="VIRTUAL-34 " --python=/usr/bin/python3.4 ~/.v34/
       virtualenv --prompt="VIRTUAL-27 " --python=/usr/bin/python2.7 ~/.v27/
-
 
 ***Next we create links***
 
@@ -90,7 +86,7 @@ _Note there is_ ***NO*** 'g' _on the end of these directory names and prompt str
         [None]
         $> deactivate
         
-        ... and we are back at the system's version which can be whatever, we don't care ;-)
+        ... and we are back at the system's version which can be whatever, it no longer matters ;-)
 
 ***If you wish, you can configure your shell with aliases for all of this, now you have a CLI API for virtualenv***
 
