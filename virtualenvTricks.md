@@ -5,7 +5,7 @@
          \_/  |_|_|   \__|\__,_|\__,_|_|_|\__, |   |_|    \__, |\__|_| |_|\___/|_| |_|
                                           |___/           |___/                       
 
-####A Virtual Environment Trick Using virtualenv 
+####Virtually Python: A Python Version Management Trick with virtualenv 
 
 ***Full Disclosure (YMMV):***
 
@@ -128,7 +128,7 @@ To maintain a virtual environment for a specific project, you should create a vi
 for that project and keep all of your files in _that_ directory with your requirements.txt etc.
 Activate _that_ specific environment to work on _that_ specific project in _that_ specific 
 directory and then deactivate it before moving to the next project. You can of course use this
-technique to setup your project with a start and stop command.
+"Virtually Python" technique to setup your project with a start and stop command.
 
         
 #Enjoy! It Works Great!
