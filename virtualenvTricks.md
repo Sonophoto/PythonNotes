@@ -38,7 +38,7 @@ we are using is the built-in system version so we don't have to add numbers to t
 ends of our commands. We also want to avoid any delays fighting with mismatched 
 libraries our language version conflicts.
 
-***Solution***
+***SOLUTION:***
 
 These "Macros" make it much easier to use whichever version you wish and change 
 from minute to minute! This method INCLUDES your regular installed system 
