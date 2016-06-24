@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-
-import argparse
-import sys
-
 import requests
-import requests.exceptions
 
 """
 Communications library for commercial (COTS) USB weather stations:
@@ -43,18 +37,17 @@ def fetch_local_weather(lat, lon, us_zip="", API_key=""):
     Returns a dict decoded from the API's JSON response
     Returns 'None' if ANY errors occur, service is unavailable.
     """
-    API_endpoint = 'http://api.openweathermap.org/data/2.5/weather' 
-    API_key = '4a4446cce56aa27a6cd85eaa0e2bb7af' 
-    our_params = dict(lat=lat, lon=lon, APPID=API_key)
-        
-    r = requests.get(API_endpoint, params=our_params)
+    API_endpoint = 'http://api.openweathermap.org/data/2.5/weather'
+    API_key ='e5591c0f23cf2f87b7854d06192b36af'
+    local_params = dict(lat=lat, lon=lon, APPID=API_key)
+
+    r = requests.get(API_endpoint, params=local_params)
     if (r):
         local_weather = r.json()
         if local_weather['cod'] == 200:
             return local_weather
-    return None
-    
-    
+    return None 
+   
 def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
     """
     Retrieve 5 day forecast from api.openweathermap.org.
@@ -63,15 +56,17 @@ def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
     Returns a dict decoded from the API's JSON response
     Returns 'None' if ANY errors occur, service is unavailable.
     """
-    API_endpoint = 'http://api.openweathermap.org/data/2.5/forecast' 
-    API_key = '4a4446cce56aa27a6cd85eaa0e2bb7af' 
-    our_params = dict(lat=lat, lon=lon, APPID=API_key)
-   
-    r = requests.get(API_endpoint, params=our_params)
+    API_endpoint = 'http://api.openweathermap.org/data/2.5/forecast'
+    API_key = 'e5591c0f23cf2f87b7854d06192b36af'
+    local_params = dict(lat=lat, lon=lon, APPID=API_key)
+
+    # I have no FOCKING idea why this call doesn't work. It works
+    # on the website.
+    r = requests.get(API_endpoint, params=local_params)
     if (r):
         local_forecast = r.json()
         if local_forecast['cod'] == 200:
-            return forecast_weather
+            return local_forecast
     return None
     
 
@@ -91,18 +86,22 @@ if __name__ == '__main__':
         print(geodata)
     else: 
         print("ERROR: Bad Local Weather Request: None")
+    del geodata
 
+    geodata = fetch_IP_geodata()
     local_weather = fetch_local_weather(geodata['lat'], geodata['lon'])
     if (local_weather):
         print("Local Weather Data: ")
         print(local_weather)
     else: 
         print("ERROR: Bad Local Weather Request: None")
-        
+    del geodata
+
+    geodata = fetch_IP_geodata()
     local_forecast = fetch_local_forecast(geodata['lat'], geodata['lon'])
     if (local_forecast):
         print("Local Forecast Data: ")
         print(local_forecast)
     else: 
         print("ERROR: Bad Forecast Request: None")
-
+    del geodata
