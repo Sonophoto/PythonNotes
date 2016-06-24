@@ -22,8 +22,6 @@ Unit Tests:
 
         We can look-up Local Weather Forecast.
 
------------------------------------------------------------------
 Originally inspired by weathercli written by Corey Goldberg, 2016 
 https://github.com/cgoldberg/weathercli                @cgoldberg
------------------------------------------------------------------
 
