@@ -80,28 +80,28 @@ def to_celsius(kelvin_temp):
 
 
 if __name__ == '__main__':
+
+# Do some Tests:
+    # Grab our network connection's geographic data:
     geodata = fetch_IP_geodata()
     if (geodata):
         print("Geo Data: ")
         print(geodata)
     else: 
         print("ERROR: Bad Local Weather Request: None")
-    del geodata
 
-    geodata = fetch_IP_geodata()
+    # Now lets use our geodata to get some local weather information:
     local_weather = fetch_local_weather(geodata['lat'], geodata['lon'])
     if (local_weather):
         print("Local Weather Data: ")
         print(local_weather)
     else: 
         print("ERROR: Bad Local Weather Request: None")
-    del geodata
-
-    geodata = fetch_IP_geodata()
+    
+    # Now lets use our geodata to get the 5-day forecast:
     local_forecast = fetch_local_forecast(geodata['lat'], geodata['lon'])
     if (local_forecast):
         print("Local Forecast Data: ")
         print(local_forecast)
     else: 
         print("ERROR: Bad Forecast Request: None")
-    del geodata
