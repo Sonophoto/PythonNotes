@@ -28,7 +28,7 @@ def fetch_IP_geodata():
     return None
 
 
-def fetch_local_weather(lat, lon, us_zip="", API_key=""):
+def fetch_local_weather(lat, lon, API_key=""):
     """
     Retrieve current weather from api.openweathermap.org.
 
@@ -48,6 +48,7 @@ def fetch_local_weather(lat, lon, us_zip="", API_key=""):
             return local_weather
     return None 
    
+
 def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
     """
     Retrieve 5 day forecast from api.openweathermap.org.
@@ -60,15 +61,14 @@ def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
     API_key = 'e5591c0f23cf2f87b7854d06192b36af'
     local_params = dict(lat=lat, lon=lon, APPID=API_key)
 
-    # I have no FOCKING idea why this call doesn't work. It works
-    # on the website.
     r = requests.get(API_endpoint, params=local_params)
     if (r):
         local_forecast = r.json()
-        if local_forecast['cod'] == 200:
+        # We need to find the schema for this data and test 'cod' == 200
+        if (local_forecast):
             return local_forecast
     return None
-    
+   
 
 def to_fahrenheit(celsius_temp):
     """convert celsius to degrees fahrenheit."""
