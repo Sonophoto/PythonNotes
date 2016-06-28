@@ -10,7 +10,7 @@ to know is 'It ain't there'
 
 Uses the following online APIs:
 
-        * ip-api.com - geolcation lookup API
+        * ip-api.com - geolocation lookup API
 
         * api.openweathermap.org - weather forecast API
 
@@ -18,9 +18,9 @@ Unit Tests:
 
         We can auto-look-up geo information.
 
-        We can look-up Local Current Weather.
+        We can look-up Current Local Weather.
 
-        We can look-up Local Weather Forecast.
+        We can look-up Forecast for Local Weather.
 
 Originally inspired by weathercli written by Corey Goldberg, 2016 
 https://github.com/cgoldberg/weathercli                @cgoldberg
