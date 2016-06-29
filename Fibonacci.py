@@ -5,27 +5,25 @@
 def Fibonacci(N):
     idx, np, nn, fibnum = 1, 0, 1, 0
     if not (N): return (fibnum)
-
+    
     while(True):
-        fibnum =  (np + nn)
-        np = nn 
-        nn = fibnum 
-        idx = idx + 1
-        if (idx >= N): return (fibnum)
+        fibnum = (np + nn)
+        np, nn, idx = (nn, fibnum, (idx + 1))
+        if (idx >= N):
+            return (fibnum)
 
 if __name__ == "__main__":
 
-    print( 0, Fibonacci(0) )
-    print( 1, Fibonacci(1) )
-    print( 2, Fibonacci(2) )
-    print( 3, Fibonacci(3) )
-    print( 4, Fibonacci(4) ) 
-    print( 5, Fibonacci(5) )  
-    print( 6, Fibonacci(6) )
-    print( 7, Fibonacci(7) )
-    print( 8, Fibonacci(8) )
-    print( 9, Fibonacci(9) )
+    print(  0,  Fibonacci(0) )
+    print(  1,  Fibonacci(1) )
+    print(  2,  Fibonacci(2) )
+    print(  3,  Fibonacci(3) )
+    print(  4,  Fibonacci(4) )
+    print(  5,  Fibonacci(5) )
+    print(  6,  Fibonacci(6) )
+    print(  7,  Fibonacci(7) )
+    print(  8,  Fibonacci(8) )
+    print(  9,  Fibonacci(9) )
     print( 10, Fibonacci(10) )
     print( 11, Fibonacci(11) )
     print( 12, Fibonacci(12) )
-
