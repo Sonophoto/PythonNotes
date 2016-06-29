@@ -3,8 +3,8 @@
 # F(0) = 0, F(1) == 1, F(2) == 1, F(3) == 3
 # 0, 1, 1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 
 def Fibonacci(N):
-    if not (N >= 1): return (0)
     idx, fibnum, np, nn, = 1, 0, 0, 1
+    if not (N >= 1): return (fibnum)
 
     while(True):
         fibnum =  (np + nn)
