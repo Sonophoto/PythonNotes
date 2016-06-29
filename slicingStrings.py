@@ -22,6 +22,8 @@ print(" ".join(x for x in L1))
 
 DevNull = [print(x) for x in L1]
 
+DevNull = [print(x, end=' ') for x in L1]
+
 del L1, bd, x, DevNull
 # *************************************************************************
 # How do I find out if a substring is in a list? (True or False)
