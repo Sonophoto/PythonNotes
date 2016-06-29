@@ -7,8 +7,7 @@ def Fibonacci(N):
     if not (N): return (fibnum)
     
     while(True):
-        fibnum = (np + nn)
-        np, nn, idx = (nn, fibnum, (idx + 1))
+        fibnum, np, nn, idx = ((np + nn), nn, (np + nn), (idx + 1))
         if (idx >= N):
             return (fibnum)
 
