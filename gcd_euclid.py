@@ -3,10 +3,10 @@ def gcd_euclid(a, b):
     while ( a != b):
         if (a > b):
             if (b == 0): return (a)
-            a = a -b
+            a = a - b
         else:
             if (a == 0): return (b)
-            b = b -a
+            b = b - a
     return a
 
 
