@@ -26,7 +26,7 @@ out = ("Down", "Up")[bool(2 > b)]
 
 # *********************************************************************
 # Now lets kick it up a notch and use references to code()
-def zerofunc() return 0
+def zerofunc(): return 0
 def onefunc(): return 1
 
 print(( zerofunc(), onefunc() )[bool(a > b)] )
