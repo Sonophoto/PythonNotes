@@ -7,7 +7,7 @@ WeatherLookup:
     
 VirtuallyPython:
 
-    https://github.com/Sonophoto/PythonNotes/blob/master/virtualenvTricks.md
+    https://github.com/Sonophoto/PythonNotes/blob/master/virtuallyPython.md
     
 
 
