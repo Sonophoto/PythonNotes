@@ -1,5 +1,6 @@
 # Complexity on this should be O(n log n) with a tree worst case
 # This a List * Hash it could be O(2n) or rather O(n) best case
+# This is a FIRST PASS, but I won't admit its known weaknesses, ever.
 def sumston (A, B, N):
     for x in A:
         if (N - x) in B: output_triple(x, (N - x), N) 
