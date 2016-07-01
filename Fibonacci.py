@@ -2,11 +2,11 @@
 # Implementation (c) 2016 Brig Young (github.com/Sonophoto)
 
 def Fibonacci(N):
-    idx, fibp, fib = 1, 0, 1
-    if not (N): return (fibp)
-    while(True):
-        idx, fibp, fib = ((idx + 1), fib, (fibp + fib)) 
-        if (idx >= N): return (fib)
+    fibp, fib = 0, 1
+    if (N == 0): return (fibp)
+    while(N > 1): 
+        N, fibp, fib = (N - 1), fib, (fibp + fib) 
+    return (fib)
 
 
 
