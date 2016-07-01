@@ -23,4 +23,4 @@ ln ~/.v34/bin/activate ~/.P34
 ln ~/.v27/bin/activate ~/.P27
 
 # For more information see: 
-# https://github.com/Sonophoto/PythonNotes/blob/master/virtualenvTricks.md
+# https://github.com/Sonophoto/PythonNotes/blob/master/virtuallyPython.md
