@@ -3,7 +3,7 @@
 
 def Fibonacci(N):
     fibp, fib = 0, 1
-    if (N == 0): return (fibp)
+    if (N == fibp): return (fibp)
     while(N > 1): 
         N, fibp, fib = (N - 1), fib, (fibp + fib) 
     return (fib)
