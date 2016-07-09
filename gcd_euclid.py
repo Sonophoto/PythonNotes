@@ -10,6 +10,8 @@ def gcd_euclid(a, b):
     return a
 
 
+
+
 # Some easy cases:
 x = 1000
 y = 20
