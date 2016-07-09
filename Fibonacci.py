@@ -3,7 +3,7 @@
 # License: BSD-2c, i.e. Cite.
 
 def Fibonacci(N):
-    """Fibonacci Sequencer, generates f(N) per:www.oeis.org/"""
+    """Fibonacci Sequencer, returns f(N) per:www.oeis.org/"""
     fibp, fib = 0, 1
     if (N == fibp): return (fibp)
     while(N > 1): 
