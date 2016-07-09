@@ -23,9 +23,7 @@ def BFS(s, Adj):
         i += 1
 
 if __name__ == "__main__":
-    
     vertices = ["s", "a", "c", "d", "f", "z", "x", "v"]
-   
     adjacency_list = {
         "a": ["s", "z"],
         "z": ["a"],
