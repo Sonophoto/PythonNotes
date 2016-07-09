@@ -19,11 +19,11 @@ def fetch_IP_geodata():
     Returns a dict decoded from the API's JSON response
     Returns 'None' if ANY errors occur, service is unavailable.
     """
-    url = 'http://ip-api.com/json'
+    API_URL = 'http://ip-api.com/json'
 
-    r = requests.get(url)
-    if (r):
-        geodata = r.json()
+    response = requests.get(API_URL)
+    if (response):
+        geodata = response.json()
         return geodata 
     return None
 
@@ -37,13 +37,13 @@ def fetch_local_weather(lat, lon, API_key=""):
     Returns a dict decoded from the API's JSON response
     Returns 'None' if ANY errors occur, service is unavailable.
     """
-    API_endpoint = 'http://api.openweathermap.org/data/2.5/weather'
-    API_key ='e5591c0f23cf2f87b7854d06192b36af'
-    local_params = dict(lat=lat, lon=lon, APPID=API_key)
+    API_URL = 'http://api.openweathermap.org/data/2.5/weather'
+    API_KEY ='e5591c0f23cf2f87b7854d06192b36af'
+    local_params = dict(lat=lat, lon=lon, APPID=API_KEY)
 
-    r = requests.get(API_endpoint, params=local_params)
-    if (r):
-        local_weather = r.json()
+    response = requests.get(API_URL, params=local_params)
+    if (response):
+        local_weather = response.json()
         if local_weather['cod'] == 200:
             return local_weather
     return None 
@@ -57,14 +57,14 @@ def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
     Returns a dict decoded from the API's JSON response
     Returns 'None' if ANY errors occur, service is unavailable.
     """
-    API_endpoint = 'http://api.openweathermap.org/data/2.5/forecast'
-    API_key = 'e5591c0f23cf2f87b7854d06192b36af'
-    local_params = dict(lat=lat, lon=lon, APPID=API_key)
+    API_URL = 'http://api.openweathermap.org/data/2.5/forecast'
+    API_KEY = 'e5591c0f23cf2f87b7854d06192b36af'
+    local_params = dict(lat=lat, lon=lon, APPID=API_KEY)
 
-    r = requests.get(API_endpoint, params=local_params)
-    if (r):
-        local_forecast = r.json()
-        # We need to find the schema for this data and test 'cod' == 200
+    response = requests.get(API_URL, params=local_params)
+    if (response):
+        local_forecast = response.json()
+        #TODO We need to find the schema for this data and test 'cod' == 200
         if (local_forecast):
             return local_forecast
     return None
@@ -80,8 +80,7 @@ def to_celsius(kelvin_temp):
 
 
 if __name__ == '__main__':
-
-# Do some Tests:
+    # Do some Tests:
     # Grab our network connection's geographic data:
     geodata = fetch_IP_geodata()
     if (geodata):
@@ -98,7 +97,7 @@ if __name__ == '__main__':
     else: 
         print("ERROR: Bad Local Weather Request: None")
     
-    # Now lets use our geodata to get the 5-day forecast:
+    # Next lets use our geodata to get the 5-day forecast:
     local_forecast = fetch_local_forecast(geodata['lat'], geodata['lon'])
     if (local_forecast):
         print("Local Forecast Data: ")
