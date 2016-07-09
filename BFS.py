@@ -1,7 +1,7 @@
 # This material was created or adapted from material created
 # by MIT faculty member Erik Demaine, Professor.
 # Copyright C 2011 Erik Demaine.
-
+# MIT License assumed, Modified 2016 Brig Young, github/Sonophoto
 parent = {}
 level = {}
  
@@ -18,6 +18,7 @@ def BFS(s, Adj):
                     level[v] = i
                     parent[v] = u
                     next.append(v)
+                print("Current Vertex: ", v, "  Current Frontier: ", frontier, "  Adjacency@Vertex: ", Adj[v])
         frontier = next
         i += 1
 
@@ -36,4 +37,8 @@ if __name__ == "__main__":
         "v": ["c", "f"]
         }
 
-BFS("s", adjacency_list) 
+    print("\n**********  B R E A D T H   F I R S T   S E A R C H  ************************\n")
+    print("Vertices: ", vertices)
+    print("Adjacency Lists: ", adjacency_list)
+    print("")
+    BFS("s", adjacency_list) 
