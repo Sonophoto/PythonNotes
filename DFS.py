@@ -1,6 +1,7 @@
 # This material was created or adapted from material created
 # by MIT faculty member Erik Demaine, Professor.
 # Copyright C 2011 Erik Demaine.
+# MIT License assumed, Modified 2016 Brig Young, github/Sonophoto
 
 parent = {}
 
