@@ -32,7 +32,7 @@ new_bd = ' '.join(x for x in L1)
 if (new_bd == bd): print("Hooray!")
 
 
-del L1, bd
+del L1, bd, new_bd
 # *************************************************************************
 # How do I print out a list of strings?
 # You can print it directly, element by element, or join() it into a str.

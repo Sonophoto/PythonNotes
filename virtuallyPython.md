@@ -36,7 +36,7 @@ Don't wait until the last minute, Python 2.7 goes EOL in less than 4 years...
 Learning both Python 2.7 and Python 3.4 is a pain. We want to work like the version 
 we are using is the built-in system version so we don't have to add numbers to the
 ends of our commands. We also want to avoid any delays fighting with mismatched 
-libraries our language version conflicts.
+libraries or language version conflicts.
 
 ***SOLUTION:***
 
