@@ -3,8 +3,9 @@
 # These commands will create a set of links for using "Virtually Python"
 # https://github.com/Sonophoto/PythonNotes/blob/master/virtuallyPython.md
 #
-# USAGE: ./virtuallyPython.sh [alias]
+# USAGE: ./virtuallyPython.sh [alias | help]
 #    [alias] appends a set of aliases to your ~/.bashrc
+#    [help]  prints a detailed usage screen
 #
 # Copyright: 2016,2017 Brig Young, Sonophoto Studios
 # License:   BSD 2-Clause: If you use it, cite it! --thanks.
@@ -88,7 +89,7 @@ alias: Append the aliases $alias_py27slick, $alias_py3slick, $alias_py27global,
  help: Displays this message and exits cleanly
 
 Author: Brig Young; Official Source: http://https://github.com/Sonophoto/PythonNotes/
-There should also be a file named virtuallyPython.md with more detailed info
+There should also be a file named README.md with more detailed info
 
 EOF
 }
