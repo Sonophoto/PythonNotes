@@ -4,6 +4,7 @@
 
 def Fibonacci(N):
     """Fibonacci Sequencer, returns f(N) per:www.oeis.org/"""
+    if (N < 0): return (-1)
     fibp, fib = 0, 1
     if (N == fibp): return (fibp)
     while(N > 1): 
