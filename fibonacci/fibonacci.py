@@ -1,15 +1,14 @@
-# Fibonacci Series: Pythonized sequencer
-# Implementation (c) 2016 Brig Young (github.com/Sonophoto)
+# Fibonacci Series:  
+# Implementation (c) 2016,2017 Brig Young (github.com/Sonophoto)
 # License: BSD-2c, i.e. Cite.
 #
 # Reference for this Series: https://oeis.org/search?q=fibonacci
 # OEIS: Online Encyclopedia of Integer Sequences
 # F(n) = (F(n-1) + F(n-2) with F(0) == 0 and F(1) == 1
 # F(0) = 0, F(1) == 1, F(2) == 1, F(3) == 2, F(4) == 3, ...
-# 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
 
 # Thanks to http://gozips.uakron.edu/~crm23/fibonacci/fibonacci.htm
-# for the closed form of the Fibonacci sequence.
+# for the closed form of the Fibonacci sequence used in the generator.
 
 from math import sqrt
 
@@ -29,6 +28,7 @@ def fibonacciGenerator():
         yield int(1/sqrt(5) * ((((1+sqrt(5))/2)**n)-(((1-sqrt(5))/2)**n)))
         n = n + 1
 
+# TODO def fibonacciRecursion():
 
 
 if __name__ == "__main__":
