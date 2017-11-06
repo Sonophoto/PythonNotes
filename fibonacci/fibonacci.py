@@ -28,7 +28,11 @@ def fibonacciGenerator():
         yield int(1/sqrt(5) * ((((1+sqrt(5))/2)**n)-(((1-sqrt(5))/2)**n)))
         n = n + 1
 
-# TODO def fibonacciRecursion():
+    #TODO
+    """
+    def fibonacciRecursion():
+        pass
+    """
 
 
 if __name__ == "__main__":
@@ -50,17 +54,30 @@ if __name__ == "__main__":
                 1836311903, 2971215073, 4807526976, 7778742049, 12586269025]
 
         def test_Iteration(self):
+            """Create a list of fibonacci numbers via iteration over count of known
+               good values and compare to contents of known good values. This version
+               is N^2 on count.
+            """
             iterated_list = []
             [iterated_list.append(fibonacciIteration(x)) for x in range(len(self.fibs))]
             self.assertTrue(iterated_list == self.fibs)
-   
  
         def test_Generator(self):
+            """Create a list of fibonacci numbers via a python generator indexed by
+               count of known good values and compare to contents of known good values
+               This version is linear on count.
+            """
             generated_list = []
             fibgen = fibonacciGenerator()
             [generated_list.append(next(fibgen)) for x in range(len(self.fibs))]
             self.assertTrue(generated_list == self.fibs)
- 
+
+         #TODO
+         """
+         def test_Recursion(self):
+             pass 
+         """
+
 
     unittest.main()
 
