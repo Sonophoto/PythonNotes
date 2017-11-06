@@ -33,7 +33,6 @@ def fibonacciGenerator():
 
 if __name__ == "__main__":
 
-
     import unittest
 
     class FibonacciTests(unittest.TestCase):
@@ -55,6 +54,14 @@ if __name__ == "__main__":
             [iterated_list.append(fibonacciIteration(x)) for x in range(len(self.fibs))]
             self.assertTrue(iterated_list == self.fibs)
    
+ 
+        def test_Generator(self):
+            generated_list = []
+            fibgen = fibonacciGenerator()
+            [generated_list.append(next(fibgen)) for x in range(len(self.fibs))]
+            self.assertTrue(generated_list == self.fibs)
+ 
+
     unittest.main()
 
 
