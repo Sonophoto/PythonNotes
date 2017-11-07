@@ -21,6 +21,13 @@ def fibonacciIteration(N):
         N, fibp, fib = (N - 1), fib, (fibp + fib)
     return (fib)
 
+def fibonacciClosedForm(N):
+    """Fibonacci Function uses closed form equation to return fibonacci(N)
+       This function is O(Constant)
+    """
+    return(int(1/sqrt(5) * ((((1+sqrt(5))/2)**N)-(((1-sqrt(5))/2)**N))))
+ 
+
 def fibonacciGenerator():
     """Fibonacci Generator, yields next Fibonacci number on each call"""
     n = 0
@@ -72,11 +79,17 @@ if __name__ == "__main__":
             [generated_list.append(next(fibgen)) for x in range(len(self.fibs))]
             self.assertTrue(generated_list == self.fibs)
 
-         #TODO
-         """
-         def test_Recursion(self):
-             pass 
-         """
+        def test_ClosedForm(self):
+            closedform_list = []
+            [closedform_list.append(fibonacciClosedForm(x)) for x in range(len(self.fibs))]
+            self.assertTrue(closedform_list == self.fibs)
+
+
+        #TODO
+        """
+        def test_Recursion(self):
+            pass 
+        """
 
 
     unittest.main()
