@@ -13,7 +13,9 @@
 from math import sqrt
 
 def fibonacciIteration(N):
-    """Fibonacci Sequencer, returns f(N) per:www.oeis.org/"""
+    """Fibonacci Sequencer, returns f(N) per:www.oeis.org/
+       Performance is O(N) from calculating (N) by sequencing.
+    """
     if (N < 0): return (-1)
     fibp, fib = 0, 1
     if (N == fibp): return (fibp)
@@ -23,13 +25,15 @@ def fibonacciIteration(N):
 
 def fibonacciClosedForm(N):
     """Fibonacci Function uses closed form equation to return fibonacci(N)
-       This function is O(Constant)
+       This function is O(Constant) for any N.
     """
     return(int(1/sqrt(5) * ((((1+sqrt(5))/2)**N)-(((1-sqrt(5))/2)**N))))
  
 
 def fibonacciGenerator():
-    """Fibonacci Generator, yields next Fibonacci number on each call"""
+    """Fibonacci Generator, yields next Fibonacci number on each call
+       Performance is O(N) from calculating in sequence.
+    """
     n = 0
     while True:
         yield int(1/sqrt(5) * ((((1+sqrt(5))/2)**n)-(((1-sqrt(5))/2)**n)))
@@ -38,6 +42,8 @@ def fibonacciGenerator():
     #TODO
     """
     def fibonacciRecursion():
+        Fibonacci Recursion uses open form to calculate fibonacci(N)
+        Performance is O(N) from calculating in sequence.
         pass
     """
 
