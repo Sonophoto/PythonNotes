@@ -39,13 +39,16 @@ def fibonacciGenerator():
         yield int(1/sqrt(5) * ((((1+sqrt(5))/2)**n)-(((1-sqrt(5))/2)**n)))
         n = n + 1
 
-    #TODO
+def fibonacciRecursion(N):
+    """Fibonacci Recursion uses naive recursion to calculate fibonacci(N)
+       Performance is O(Really Bad) from deep call stacks on N > 30
     """
-    def fibonacciRecursion():
-        Fibonacci Recursion uses open form to calculate fibonacci(N)
-        Performance is O(N) from calculating in sequence.
-        pass
-    """
+    if (N == 0):
+        return (0)
+    elif (N == 1):
+        return (1)
+    else:
+        return(fibonacciRecursion(N-1) + fibonacciRecursion(N-2))
 
 
 if __name__ == "__main__":
@@ -77,7 +80,7 @@ if __name__ == "__main__":
  
         def test_Generator(self):
             """Create a list of fibonacci numbers via a python generator indexed by
-               count of known good values and compare to list of known good values
+               count of known good values and compare to list of known good values.
             """
             generated_list = []
             fibgen = fibonacciGenerator()
@@ -87,19 +90,21 @@ if __name__ == "__main__":
 
         def test_ClosedForm(self):
             """Create a list of fibonacci numbers via closed form equation indexed by 
-               count of known good values and compare to list of known good values
+               count of known good values and compare to list of known good values.
             """
             closedform_list = []
             [closedform_list.append(fibonacciClosedForm(x)) for x in range(len(self.fibs))]
             self.assertEqual(closedform_list, self.fibs,\
             "fibonacciClosedForm() has calculated incorrect values")
 
-
-        #TODO
-        """
         def test_Recursion(self):
-            pass 
-        """
+            """Create a list of fibonacci numbers via naive recursion indexed by
+               count of known good values and compare to list of known good values.
+            """
+            recursion_list = []
+            [recursion_list.append(fibonacciRecursion(x)) for x in range(len(self.fibs))]
+            self.assertEqual(recursion_list, self.fibs,\
+            "fibonacciRecursion() has calculated incorrect values")
 
 
     unittest.main()
