@@ -73,7 +73,8 @@ if __name__ == "__main__":
             """
             sequenced_list = []
             [sequenced_list.append(fibonacciSequencer(x)) for x in range(len(self.fibs))]
-            self.assertTrue(sequenced_list == self.fibs)
+            self.assertEqual(sequenced_list, self.fibs,\
+            "fibonacciSequencer() has calculated incorrect values")
  
         def test_Generator(self):
             """Create a list of fibonacci numbers via a python generator indexed by
@@ -83,12 +84,14 @@ if __name__ == "__main__":
             generated_list = []
             fibgen = fibonacciGenerator()
             [generated_list.append(next(fibgen)) for x in range(len(self.fibs))]
-            self.assertTrue(generated_list == self.fibs)
+            self.assertEqual(generated_list, self.fibs,\
+            "fibonacciGenerator() has caculated incorrect values")
 
         def test_ClosedForm(self):
             closedform_list = []
             [closedform_list.append(fibonacciClosedForm(x)) for x in range(len(self.fibs))]
-            self.assertTrue(closedform_list == self.fibs)
+            self.assertEqual(closedform_list, self.fibs,\
+            "fibonacciClosedForm() has calculated incorrect values")
 
 
         #TODO
