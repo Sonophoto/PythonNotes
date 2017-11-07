@@ -67,9 +67,8 @@ if __name__ == "__main__":
                 1836311903, 2971215073, 4807526976, 7778742049, 12586269025]
 
         def test_Sequencer(self):
-            """Create a list of fibonacci numbers via iteration over count of known
-               good values and compare to contents of known good values. This version
-               is N^2 on count.
+            """Create a list of fibonacci numbers via sequencing over count of known
+               good values and compare to list of known good values.
             """
             sequenced_list = []
             [sequenced_list.append(fibonacciSequencer(x)) for x in range(len(self.fibs))]
@@ -78,8 +77,7 @@ if __name__ == "__main__":
  
         def test_Generator(self):
             """Create a list of fibonacci numbers via a python generator indexed by
-               count of known good values and compare to contents of known good values
-               This version is linear on count.
+               count of known good values and compare to list of known good values
             """
             generated_list = []
             fibgen = fibonacciGenerator()
@@ -88,6 +86,9 @@ if __name__ == "__main__":
             "fibonacciGenerator() has caculated incorrect values")
 
         def test_ClosedForm(self):
+            """Create a list of fibonacci numbers via closed form equation indexed by 
+               count of known good values and compare to list of known good values
+            """
             closedform_list = []
             [closedform_list.append(fibonacciClosedForm(x)) for x in range(len(self.fibs))]
             self.assertEqual(closedform_list, self.fibs,\
