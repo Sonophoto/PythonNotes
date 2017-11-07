@@ -12,7 +12,7 @@
 
 from math import sqrt
 
-def fibonacciIteration(N):
+def fibonacciSequencer(N):
     """Fibonacci Sequencer, returns f(N) per:www.oeis.org/
        Performance is O(N) from calculating (N) by sequencing.
     """
@@ -66,14 +66,14 @@ if __name__ == "__main__":
                 165580141, 267914296, 433494437, 701408733, 1134903170,\
                 1836311903, 2971215073, 4807526976, 7778742049, 12586269025]
 
-        def test_Iteration(self):
+        def test_Sequencer(self):
             """Create a list of fibonacci numbers via iteration over count of known
                good values and compare to contents of known good values. This version
                is N^2 on count.
             """
-            iterated_list = []
-            [iterated_list.append(fibonacciIteration(x)) for x in range(len(self.fibs))]
-            self.assertTrue(iterated_list == self.fibs)
+            sequenced_list = []
+            [sequenced_list.append(fibonacciSequencer(x)) for x in range(len(self.fibs))]
+            self.assertTrue(sequenced_list == self.fibs)
  
         def test_Generator(self):
             """Create a list of fibonacci numbers via a python generator indexed by
