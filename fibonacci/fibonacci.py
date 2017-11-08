@@ -1,4 +1,4 @@
-# Fibonacci Series:  
+# Fibonacci Series:
 # Implementation (c) 2016,2017 Brig Young (github.com/Sonophoto)
 # License: BSD-2c, i.e. Cite.
 #
@@ -28,7 +28,7 @@ def fibonacciClosedForm(N):
        This function is O(Constant) for any N.
     """
     return(int(1/sqrt(5) * ((((1+sqrt(5))/2)**N)-(((1-sqrt(5))/2)**N))))
- 
+
 
 def fibonacciGenerator():
     """Fibonacci Generator, yields next Fibonacci number on each call
@@ -39,7 +39,7 @@ def fibonacciGenerator():
         yield int(1/sqrt(5) * ((((1+sqrt(5))/2)**n)-(((1-sqrt(5))/2)**n)))
         n = n + 1
 
-def fibonacciRecursion(N):
+def fibonacciNaiveRecursion(N):
     """Fibonacci Recursion uses naive recursion to calculate fibonacci(N)
        Performance is O(Really Bad) from deep call stacks on N > 30
     """
@@ -48,7 +48,7 @@ def fibonacciRecursion(N):
     elif (N == 1):
         return (1)
     else:
-        return(fibonacciRecursion(N-1) + fibonacciRecursion(N-2))
+        return(fibonacciNaiveRecursion(N-1) + fibonacciNaiveRecursion(N-2))
 
 
 if __name__ == "__main__":
@@ -68,6 +68,8 @@ if __name__ == "__main__":
                 9227465, 14930352, 24157817, 39088169, 63245986, 102334155,\
                 165580141, 267914296, 433494437, 701408733, 1134903170,\
                 1836311903, 2971215073, 4807526976, 7778742049, 12586269025]
+        """A curated list of Fibonacci numbers with correctly matched indexes
+        """
 
         def test_Sequencer(self):
             """Create a list of fibonacci numbers via sequencing over count of known
@@ -77,7 +79,7 @@ if __name__ == "__main__":
             [sequenced_list.append(fibonacciSequencer(x)) for x in range(len(self.fibs))]
             self.assertEqual(sequenced_list, self.fibs,\
             "fibonacciSequencer() has calculated incorrect values")
- 
+
         def test_Generator(self):
             """Create a list of fibonacci numbers via a python generator indexed by
                count of known good values and compare to list of known good values.
@@ -89,7 +91,7 @@ if __name__ == "__main__":
             "fibonacciGenerator() has caculated incorrect values")
 
         def test_ClosedForm(self):
-            """Create a list of fibonacci numbers via closed form equation indexed by 
+            """Create a list of fibonacci numbers via closed form equation indexed by
                count of known good values and compare to list of known good values.
             """
             closedform_list = []
@@ -97,15 +99,16 @@ if __name__ == "__main__":
             self.assertEqual(closedform_list, self.fibs,\
             "fibonacciClosedForm() has calculated incorrect values")
 
-        @unittest.skip("Currently this test runs for 47995.003 seconds")
-        def test_Recursion(self):
+        def test_NaiveRecursion(self):
             """Create a list of fibonacci numbers via naive recursion indexed by
                count of known good values and compare to list of known good values.
             """
+            fibs_short_list = self.fibs[:20]
             recursion_list = []
-            [recursion_list.append(fibonacciRecursion(x)) for x in range(len(self.fibs))]
-            self.assertEqual(recursion_list, self.fibs,\
+            [recursion_list.append(fibonacciNaiveRecursion(x)) for x in range(len(fibs_short_list))]
+            self.assertEqual(recursion_list, fibs_short_list,\
             "fibonacciRecursion() has calculated incorrect values")
+
 
     unittest.main()
 
