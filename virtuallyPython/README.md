@@ -5,7 +5,7 @@
          \_/  |_|_|   \__|\__,_|\__,_|_|_|\__, |   |_|    \__, |\__|_| |_|\___/|_| |_|
                                           |___/           |___/                       
 
-####Virtually Python: A Python Version Management Trick with virtualenv 
+#### Virtually Python: A Python Version Management Trick with virtualenv 
 
 ***Full Disclosure (YMMV):***
 
@@ -35,8 +35,7 @@ Don't wait until the last minute, Python 2.7 goes EOL in less than 4 years...
 
 Learning both Python 2.7 and Python 3.4 is a pain. We want to work like the version 
 we are using is the built-in system version so we don't have to add numbers to the
-ends of our commands. We also want to avoid any delays fighting with mismatched 
-libraries or language version conflicts.
+ends of our commands (Disclosure: This is considered bad practice by many Pythonistas). We also want to avoid any delays fighting with mismatched libraries or language version conflicts.
 
 ***SOLUTION:***
 
@@ -127,4 +126,4 @@ directory and then deactivate it before moving to the next project. You can of c
 "Virtually Python" technique to setup your project with a start and stop command.
 
         
-#Enjoy! It Works Great!
+# Enjoy! It Works Great!
