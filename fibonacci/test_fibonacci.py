@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Fibonacci Series:
 # Implementation (c) 2016,2017 Brig Young (github.com/Sonophoto)
 # License: BSD-2c, i.e. Cite.
