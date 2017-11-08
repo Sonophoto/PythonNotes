@@ -2,7 +2,7 @@
 All of my notes from learning to use Python, in the likely case that I forget...
 
 ### WeatherLookup:
-Example of how to use a [REST API]() from Python. Tests included.
+Example of how to use a [REST API](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) from Python. Tests included.
 
 [https://github.com/Sonophoto/PythonNotes/blob/master/WeatherLookup.md](https://github.com/Sonophoto/PythonNotes/blob/master/WeatherLookup.md)
     
