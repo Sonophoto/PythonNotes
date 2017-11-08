@@ -97,6 +97,7 @@ if __name__ == "__main__":
             self.assertEqual(closedform_list, self.fibs,\
             "fibonacciClosedForm() has calculated incorrect values")
 
+        @unittest.skip("Currently this test runs for 47995.003 seconds")
         def test_Recursion(self):
             """Create a list of fibonacci numbers via naive recursion indexed by
                count of known good values and compare to list of known good values.
@@ -106,7 +107,5 @@ if __name__ == "__main__":
             self.assertEqual(recursion_list, self.fibs,\
             "fibonacciRecursion() has calculated incorrect values")
 
-
     unittest.main()
-
 
