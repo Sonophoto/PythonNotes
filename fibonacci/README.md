@@ -12,11 +12,11 @@ A variety of methods for calculating our favourite integer sequence. Unit tests 
                   
 ### Usage:
 
-It is expected that these functions are simply for learning and study the source code. Tests can be executed by running `./test_fibonacci.py` directly on the command line. Tests are built with the unittest module included with Python 3
+It is expected that these functions are simply for learning and study. Tests can be executed by running `./test_fibonacci.py` directly on the command line. Tests are built with the unittest module included with Python 3
 
 ### License:
 
-You can use this material in any way you like, simply include in your blog, article, paper, documentation, video description, etc. a link directly to this repository:
+You can use this material in any way you like, simply include a link directly to this repository in your blog, article, paper, documentation, video description, etc. a link directly to this repository:
 
     https://github.com/Sonophoto/PythonNotes/tree/master/fibonacci
 
