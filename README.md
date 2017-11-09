@@ -7,7 +7,7 @@ Example of how to use a [REST API](https://www.ics.uci.edu/~fielding/pubs/disser
 [https://github.com/Sonophoto/PythonNotes/blob/master/WeatherLookup.md](https://github.com/Sonophoto/PythonNotes/blob/master/WeatherLookup.md)
     
 ### VirtuallyPython:
-A Bourne shell script that automagically creates virtual environments for Python and Python3
+A Bourne shell script that automagically creates virtual environments for Python and Python3.
 
 [https://github.com/Sonophoto/PythonNotes/blob/master/virtuallyPython.md](https://github.com/Sonophoto/PythonNotes/blob/master/virtuallyPython.md)
 
@@ -22,6 +22,11 @@ A simple example of using the `random` module in `python3` to efficiently shuffl
 [https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py](https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py)
 
 ### Rainbow Generator:
-generates text tuples of warm and cool colours from the set ("red", "orange", "yellow", "green", "blue", "purple")
+Generates text tuples of warm and cool colours from the set ("red", "orange", "yellow", "green", "blue", "purple").
 
 [https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py](https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py)
+
+### Slicing Strings
+Notes on various methods for manipulating strings with slices in a question and answer format.
+
+[https://github.com/Sonophoto/PythonNotes/blob/master/SlicingStrings.py](https://github.com/Sonophoto/PythonNotes/blob/master/SlicingStrings.py)
