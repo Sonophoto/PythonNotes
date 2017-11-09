@@ -11,6 +11,7 @@
 # for the closed form of the Fibonacci sequence used in the generator.
 
 from math import sqrt
+from functools import wraps
 
 def fibonacciSequencer(N):
     """Fibonacci Sequencer, returns f(N) per:www.oeis.org/
@@ -29,7 +30,6 @@ def fibonacciClosedForm(N):
     """
     return(int(1/sqrt(5) * ((((1+sqrt(5))/2)**N)-(((1-sqrt(5))/2)**N))))
 
-
 def fibonacciGenerator():
     """Fibonacci Generator, yields next Fibonacci number on each call
        Performance is O(N) from calculating in sequence.
@@ -43,10 +43,31 @@ def fibonacciNaiveRecursion(N):
     """Fibonacci Recursion uses naive recursion to calculate fibonacci(N)
        Performance is O(Really Bad) from deep call stacks on N > 30
     """
-    if (N == 0):
-        return (0)
-    elif (N == 1):
-        return (1)
-    else:
-        return(fibonacciNaiveRecursion(N-1) + fibonacciNaiveRecursion(N-2))
+    if (N < 2):
+        return N
+    return(fibonacciNaiveRecursion(N-1) + fibonacciNaiveRecursion(N-2))
+
+def memo(function):
+    """This decorator caches a functions calculated results and returns the
+       cached result when called again with the same input.
+       Memo-izing is from pp. 177 "Python Algorithms" by Magnus Lie Hetland
+    """
+    cache = {}
+    @wraps(function)
+    def wrap(*args):
+        if args not in cache:
+            cache[args] = function(*args)
+        return cache[args]
+    return wrap
+
+@memo
+def fibonacciMemoRecursion(N):
+    """Fibonacci Memo Recursion uses memo-izing to cache previously caculated 
+       results in a simple recursive function so that recursed calls on the
+       same value return cache hits instead of recalculating
+    """
+    if (N < 2):
+        return N
+    return fibonacciMemoRecursion(N-1) + fibonacciMemoRecursion(N-2)
+
 

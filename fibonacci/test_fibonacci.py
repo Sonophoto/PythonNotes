@@ -21,13 +21,17 @@ class FibonacciTests(unittest.TestCase):
                       39 - 50 manually calculated and verified by Brig Young
     """
 
-    fibs = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34,\
-            55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181,\
-            6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418,\
-            317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887,\
-            9227465, 14930352, 24157817, 39088169, 63245986, 102334155,\
-            165580141, 267914296, 433494437, 701408733, 1134903170,\
-            1836311903, 2971215073, 4807526976, 7778742049, 12586269025]
+    century_fib = 573147844013817084101
+    """A curated value of fibonacci(100) ref: M.L. Hetland pp. 177
+    """
+
+    fibs = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,\
+            610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657,\
+            46368, 75025, 121393, 196418, 317811, 514229, 832040,\
+            1346269, 2178309, 3524578, 5702887, 9227465, 14930352,\
+            24157817, 39088169, 63245986, 102334155, 165580141,\
+            267914296, 433494437, 701408733, 1134903170, 1836311903,\
+            2971215073, 4807526976, 7778742049, 12586269025]
     """A curated list of Fibonacci numbers with correctly matched indexes
     """
 
@@ -69,6 +73,23 @@ class FibonacciTests(unittest.TestCase):
         self.assertEqual(recursion_list, fibs_short_list,\
         "fibonacciRecursion() has calculated incorrect values")
 
+    def test_MemoRecursion(self):
+        """Create a list of fibonacci numbers via recursion with a memo-ized
+           cache of previously calculated values. The returned list of values
+           are then compared to a list of known good values.
+        """
+        fibs_short_list = self.fibs[:20]
+        memo_recursion_list = []
+        [memo_recursion_list.append(fm.fibonacciMemoRecursion(x)) for x in range(len(fibs_short_list))]
+        self.assertEqual(memo_recursion_list, fibs_short_list,\
+        "fibonacciMemoRecursion() has calculated incorrect values")
 
+    @unittest.expectedFailure
+    def test_DeepRecursion(self):
+        """Evaluate Memo Recursion at N=100 and compared to known good result
+        """
+        self.assertEqual(fm.fibonacciMemoRecursion(100), self.century_fib,\
+        "fibonacciMemoRecursion() has caluculated incorrect deep result")
+ 
 unittest.main()
 
