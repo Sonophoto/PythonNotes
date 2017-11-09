@@ -26,7 +26,12 @@ Generates text tuples of warm and cool colours from the set ("red", "orange", "y
 
 [https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py](https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py)
 
-### Slicing Strings
+### Slicing Strings:
 Notes on various methods for manipulating strings with slices in a question and answer format.
 
 [https://github.com/Sonophoto/PythonNotes/blob/master/SlicingStrings.py](https://github.com/Sonophoto/PythonNotes/blob/master/SlicingStrings.py)
+
+### Ternary Madness and Indexed Tuples:
+Several approaches to using the Ternary conditional construct with references and iterating through lists of references. 
+
+[https://github.com/Sonophoto/PythonNotes/blob/master/TernaryMadnessAndIndexedTuples.py$](https://github.com/Sonophoto/PythonNotes/blob/master/TernaryMadnessAndIndexedTuples.py)
