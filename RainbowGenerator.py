@@ -1,6 +1,10 @@
-# Generate 2 colour combos from R-O-Y-G-B-Purple
-# Implementation (c) 2017 Brig Young (github.com/Sonophoto)
-# License: BSD-2c, i.e. Cite.
+#!/usr/bin/env python3
+"""
+Calculate 2 colour combos from R-O-Y-G-B-Purple
+
+Implementation (c) 2017 Brig Young (github.com/Sonophoto)
+License: BSD-2c, i.e. Cite.
+"""
 
 warm_colours = ["red", "orange", "yellow"]
 cool_colours = ["green", "blue", "purple"]

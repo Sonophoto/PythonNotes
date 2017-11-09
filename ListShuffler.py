@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+"""
+Create a random distribution of nibbles with exactly
+4 of each of the 16 possible values and output as a
+comma delimited string
+
+Implementation (c) 2017 Brig Young (github.com/Sonophoto)
+License: BSD-2c, i.e. Cite.
+"""
+
 import random as shuffler
 
 shufflee = [\
