@@ -16,4 +16,12 @@ A variety of methods for calculating our favourite integer sequence. Unit tests 
 
 [https://github.com/Sonophoto/PythonNotes/tree/master/fibonacci](https://github.com/Sonophoto/PythonNotes/tree/master/fibonacci)
 
+### ListShuffler:
+A simple example of using the `random` module in `python3` to efficiently shuffle a list of values.
 
+[https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py](https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py)
+
+### Rainbow Generator:
+generates text tuples of warm and cool colours from the set ("red", "orange", "yellow", "green", "blue", "purple")
+
+[https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py](https://github.com/Sonophoto/PythonNotes/blob/master/ListShuffler.py)
