@@ -91,5 +91,5 @@ class FibonacciTests(unittest.TestCase):
         self.assertEqual(fm.fibonacciMemoRecursion(100), self.century_fib,\
         "fibonacciMemoRecursion() has caluculated incorrect deep result")
  
-unittest.main()
+unittest.main(verbosity=2)
 
