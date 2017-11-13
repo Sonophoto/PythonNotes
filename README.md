@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes)
+
 # PythonNotes
 All of my notes from learning to use Python, in the likely case that I forget...
 
