@@ -16,15 +16,5 @@ gcd(a,b) has the same sign as b if b is nonzero;
 otherwise it takes the sign of a.
 gcd(0, 0) returns 0.
 
-Concrete Math, Graham, Knuth, Patashnik, pp. 103:
+##### NOTE: Concrete Math, Graham, Knuth, Patashnik, pp. 103:
 says gcd(0,0) is undefined, i.e. gcd(0,0):return NaN
-
-### Recursive gcd([list]) (This is not included in our tests)
-This is an intersting gist that demonstrates a wrapper that
-does a recursive reduction on an input list using math.gcd():
-https://gist.github.com/endolith/114336
-
-
-
-
-
