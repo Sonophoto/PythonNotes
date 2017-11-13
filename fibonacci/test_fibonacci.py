@@ -21,8 +21,11 @@ class FibonacciTests(unittest.TestCase):
                       39 - 50 manually calculated and verified by Brig Young
     """
 
-    century_fib = 573147844013817084101
-    """A curated value of fibonacci(100) ref: M.L. Hetland pp. 177
+    century_fib = 354224848179261915075
+    """A curated value of fibonacci(100) ref: M.L. Hetland pp. 177.
+       Note that Magnus is skipping the beginning zero so his indices are
+       actually (N-1). Also see:
+       http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibtable.html
     """
 
     fibs = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,\
@@ -84,7 +87,6 @@ class FibonacciTests(unittest.TestCase):
         self.assertEqual(memo_recursion_list, fibs_short_list,\
         "fibonacciMemoRecursion() has calculated incorrect values")
 
-    @unittest.expectedFailure
     def test_DeepRecursion(self):
         """Evaluate Memo Recursion at N=100 and compared to known good result
         """
