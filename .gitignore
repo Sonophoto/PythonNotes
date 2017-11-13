@@ -1,7 +1,8 @@
 # Visual Studio Code IDE
 .vscode
 
-
+# Vi Editor
+*.swp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
