@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes/GCD)
+
 # GCD: Greatest Common Divisor
 
 ## A study of The OG algorithm with modern variations
