@@ -85,7 +85,11 @@ class gcdVersionTests(unittest.TestCase):
 )
 
     def test_gcd_lame_bounds(self):
-        self.assertTrue(True)
+        generated_bounds = [] 
+        for element in self.bounds:
+            generated_bounds.append((element[0], element[1], gcd_lame(element[0], element[1])))
+        self.assertEqual(generated_bounds, self.bounds,\
+        "Failed: gcd_lame() bounds test")
 
     def test_gcd_lame_pathological(self):
         self.assertTrue(True)
