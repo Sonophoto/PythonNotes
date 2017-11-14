@@ -92,7 +92,11 @@ class gcdVersionTests(unittest.TestCase):
         "Failed: gcd_lame() bounds test")
 
     def test_gcd_lame_pathological(self):
-        self.assertTrue(True)
+        generated_pathos = [] 
+        for element in self.pathos:
+            generated_pathos.append((element[0], element[1], gcd_lame(element[0], element[1])))
+        self.assertEqual(generated_pathos, self.pathos,\
+        "Failed: gcd_lame() pathological test")
 
     def test_gcd_lame_fuzzed(self):
         self.assertTrue(True)
