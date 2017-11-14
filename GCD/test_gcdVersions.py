@@ -56,7 +56,11 @@ class gcdVersionTests(unittest.TestCase):
         "Failed: gcd_euclid() edges test")
 
     def test_gcd_euclid_pathological(self):
-        self.assertTrue(True)
+        generated_bounds = []
+        for element in self.bounds:
+            generated_bounds.append((element[0], element[1], gcd_euclid(element[0], element[1])))
+        self.assertEqual(self.bounds, generated_bounds,\
+        "Failed: gcd_euclid() bounds test")
 
     def test_gcd_euclid(self):
         self.assertTrue(True)
