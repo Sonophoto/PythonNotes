@@ -69,8 +69,12 @@ class gcdVersionTests(unittest.TestCase):
         self.assertEqual(self.pathos, generated_pathos,\
         "Failed: gcd_euclid() pathological test")
 
-    def test_gcd_euclid(self):
-        self.assertTrue(True)
+    def test_gcd_euclid_fuzzed(self):
+        generated_fuzzies = []
+        for element in self.fuzzies:
+            generated_fuzzies.append((element[0], element[1], gcd_euclid(element[0], element[1])))
+        self .assertEqual(self.fuzzies, generated_fuzzies,\
+        "Failed: gcd_euclid() fuzzed test")
 
     def test_gcd_lame_edges(self):
         self.assertTrue(True)
