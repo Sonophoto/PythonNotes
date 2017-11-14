@@ -99,6 +99,10 @@ class gcdVersionTests(unittest.TestCase):
         "Failed: gcd_lame() pathological test")
 
     def test_gcd_lame_fuzzed(self):
-        self.assertTrue(True)
+        generated_fuzzies = []
+        for element in self.fuzzies:
+            generated_fuzzies.append((element[0], element[1], gcd_lame(element[0], element[1])))
+        self.assertEqual(generated_fuzzies, self.fuzzies,
+        "Failed: gcd_lame() fuzzed test")
         
 unittest.main(verbosity=2)
