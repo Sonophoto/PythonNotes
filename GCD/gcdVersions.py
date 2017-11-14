@@ -38,7 +38,7 @@ def gcd_lame(a, b):
     Calculate gcd using Gabiel Lame's mod-ification of Euclids algorithm
     """
 
-    if (a == 0 and b == 0):
+    if (a <= 0 and b <= 0):
         return("NaN")
     if (a == 0 or b == 0):
         return (0)
