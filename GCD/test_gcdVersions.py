@@ -29,7 +29,7 @@ class gcdVersionTests(unittest.TestCase):
     """ The two edge cases in mathematical definition of gcd(a,b)
     """
 
-    pathos = [(1000000000,10,10), (10,1000000000,10)]
+    pathos = [(100000000,10,10), (10,100000000,10)]
     """ A worst case test for gcd(a,b), especially gcd_euclid(a,b)
         Runs 100e6 loops for Euclid and 5*10(digits) loops for Lamé.
     """
@@ -55,12 +55,19 @@ class gcdVersionTests(unittest.TestCase):
         self.assertEqual(self.edges, generated_edges,\
         "Failed: gcd_euclid() edges test")
 
-    def test_gcd_euclid_pathological(self):
+    def test_gcd_euclid_bounds(self):
         generated_bounds = []
         for element in self.bounds:
             generated_bounds.append((element[0], element[1], gcd_euclid(element[0], element[1])))
         self.assertEqual(self.bounds, generated_bounds,\
         "Failed: gcd_euclid() bounds test")
+
+    def test_gcd_euclid_pathological(self):
+        generated_pathos = []
+        for element in self.pathos:
+            generated_pathos.append((element[0], element[1], gcd_euclid(element[0], element[1])))
+        self.assertEqual(self.pathos, generated_pathos,\
+        "Failed: gcd_euclid() pathological test")
 
     def test_gcd_euclid(self):
         self.assertTrue(True)
