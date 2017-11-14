@@ -77,12 +77,20 @@ class gcdVersionTests(unittest.TestCase):
         "Failed: gcd_euclid() fuzzed test")
 
     def test_gcd_lame_edges(self):
+        generated_edges = []
+        for element in self.edges:
+            generated_edges.append((element[0], element[1], gcd_lame(element[0], element[1])))
+        self.assertEqual(generated_edges, self.edges,
+        "Failed: gcd_lame() edges test"
+)
+
+    def test_gcd_lame_bounds(self):
         self.assertTrue(True)
 
     def test_gcd_lame_pathological(self):
         self.assertTrue(True)
 
-    def test_gcd_lame(self):
+    def test_gcd_lame_fuzzed(self):
         self.assertTrue(True)
         
 unittest.main(verbosity=2)
