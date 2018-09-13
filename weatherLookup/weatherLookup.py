@@ -87,7 +87,7 @@ if __name__ == '__main__':
         print("Geo Data: ")
         print(geodata)
     else: 
-        print("ERROR: Bad Local Weather Request: None")
+        print("ERROR: Bad Geo Data Request: None")
 
     # Now lets use our geodata to get some local weather information:
     local_weather = fetch_local_weather(geodata['lat'], geodata['lon'])
