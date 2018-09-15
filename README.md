@@ -9,10 +9,10 @@ Example of how to use a [REST API](https://www.ics.uci.edu/~fielding/pubs/disser
 ### [VirtuallyPython](https://github.com/Sonophoto/PythonNotes/tree/master/virtuallyPython):
 A Bourne shell script that automagically creates virtual environments for Python and Python3.
 
-### [Fibonacci](https://github.com/Sonophoto/PythonNotes/tree/master/fibonacci): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes)
+### [Fibonacci](https://github.com/Sonophoto/PythonNotes/tree/master/fibonacci): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes/fibonacci)
 A variety of methods for calculating our favourite integer sequence. Unit tests included.
 
-### [Greatest Common Divisor](https://github.com/Sonophoto/PythonNotes/tree/master/GCD): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes)
+### [Greatest Common Divisor](https://github.com/Sonophoto/PythonNotes/tree/master/GCD): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes/GCD)
 Quite possibly the oldest algorithm known to modern man. Unit tests included.
 
 ### [Fuzzy Maker](https://github.com/Sonophoto/PythonNotes/blob/master/fuzzset.py):
