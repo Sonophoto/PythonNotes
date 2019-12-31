@@ -24,7 +24,7 @@ def fetch_IP_geodata():
     response = requests.get(API_URL)
     if (response):
         geodata = response.json()
-        return geodata 
+        return geodata
     return None
 
 
@@ -33,7 +33,7 @@ def fetch_local_weather(lat, lon, API_key=""):
     Retrieve current weather from api.openweathermap.org.
 
     WARNING: Free API allows a maximum of 60 requests/minute
-    Documentation: http://openweathermap.org/current#geo 
+    Documentation: http://openweathermap.org/current#geo
     Returns a dict decoded from the API's JSON response
     Returns 'None' if ANY errors occur, service is unavailable.
     """
@@ -46,8 +46,8 @@ def fetch_local_weather(lat, lon, API_key=""):
         local_weather = response.json()
         if local_weather['cod'] == 200:
             return local_weather
-    return None 
-   
+    return None
+
 
 def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
     """
@@ -68,7 +68,7 @@ def fetch_local_forecast(lat, lon, us_zip="", API_key=""):
         if (local_forecast):
             return local_forecast
     return None
-   
+
 
 def to_fahrenheit(celsius_temp):
     """convert celsius to degrees fahrenheit."""
@@ -86,7 +86,7 @@ if __name__ == '__main__':
     if (geodata):
         print("Geo Data: ")
         print(geodata)
-    else: 
+    else:
         print("ERROR: Bad Geo Data Request: None")
 
     # Now lets use our geodata to get some local weather information:
@@ -94,13 +94,13 @@ if __name__ == '__main__':
     if (local_weather):
         print("Local Weather Data: ")
         print(local_weather)
-    else: 
+    else:
         print("ERROR: Bad Local Weather Request: None")
-    
+
     # Next lets use our geodata to get the 5-day forecast:
     local_forecast = fetch_local_forecast(geodata['lat'], geodata['lon'])
     if (local_forecast):
         print("Local Forecast Data: ")
         print(local_forecast)
-    else: 
+    else:
         print("ERROR: Bad Forecast Request: None")

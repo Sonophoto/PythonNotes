@@ -16,7 +16,7 @@
 
 def gcd_euclid(a, b):
     """ Calculate gcd using Euclid original algorithm from Elements VII.2
-    
+
     """
     if (a <= 0 and b <= 0):         # gcd(0,0) is UNDEFINED
        return("NaN")

@@ -9,7 +9,7 @@ A variety of methods for calculating our favourite integer sequence. Unit tests 
 [OEIS: Online Encyclopedia of Integer Sequences](https://oeis.org/search?q=fibonacci)
 
 [Colin Mitchell: Closed form Fibonacci Equation](http://gozips.uakron.edu/~crm23/fibonacci/fibonacci.htm)
-                  
+
 ### Usage:
 
 It is expected that these functions are simply for learning and study. Tests can be executed by running `./test_fibonacci.py` directly on the command line. Tests are built with the unittest module included with Python 3
@@ -22,7 +22,7 @@ You can use this material in any way you like, simply include a link directly to
 
 see [LICENSE](https://github.com/Sonophoto/PythonNotes/blob/master/LICENSE) for details.
 
-### Warning to Students: 
+### Warning to Students:
 
 Do Not cheat on your homework, you are really only cheating yourself -- If you are caught you may be expelled from school:
 

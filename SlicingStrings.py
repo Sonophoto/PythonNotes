@@ -15,7 +15,7 @@ L1 = [bd[:5], bd[6:13], bd[-8:]]
 # Note also that the last index such as (:5) or the 13 in (6:13)
 # *Must*Be* one more than the index of the last character you want.
 # This is easy to think of as moving just past the character you need
-# to capture to the beginning of the next character after it or the 
+# to capture to the beginning of the next character after it or the
 # end of the string
 
 # You can also print the slices with a secified delimiter:
@@ -33,7 +33,6 @@ new_bd = ' '.join(x for x in L1)
 # Lets make sure they are the same:
 if (new_bd == bd): print("Hooray!")
 
-
 del L1, bd, new_bd
 
 # *************************************************************************
@@ -47,14 +46,14 @@ L1 = [bd[:5], bd[6:13], bd[-8:]]
 
 print(L1)
 
-for x in L1: print(x)
+for x in L1:
+    print(x)
 
 print(" ".join(x for x in L1))
 
 DevNull = [print(x) for x in L1]
 
 DevNull = [print(x, end=' ') for x in L1]
-
 
 del L1, bd, x, DevNull
 
@@ -65,7 +64,6 @@ del L1, bd, x, DevNull
 """
 L1 = "After this substring - Print Everything Else".split(" ")
 Boolean_answer = "substring" in L1
-
 
 del L1, Boolean_answer
 
@@ -78,7 +76,6 @@ s1 = "After this substring - Print Everything Else"
 s2 = "substring"
 s1_idx_of_s2 = s1.index(s2)
 
-
 del s1, s2, s1_idx_of_s2
 
 # *************************************************************************
@@ -88,7 +85,6 @@ del s1, s2, s1_idx_of_s2
 """
 s1 = "After this substring - Print Everything Else"
 length_of_s1 = len(s1)
-
 
 del s1, length_of_s1
 
@@ -101,7 +97,6 @@ s1 = "After this substring - Print Everything Else"
 s2 = "substring"
 s3 = s1[s1.index(s2) + len(s2):]
 
-
 del s1, s2, s3
 
 # *************************************************************************
@@ -111,7 +106,6 @@ del s1, s2, s3
 """
 L1 = [1, 22, 13, 42, 451, 66, 7, 8, 1999]
 s1 = " ".join(str(x) for x in L1)
-
 
 del L1, s1
 
@@ -124,7 +118,6 @@ del L1, s1
 s1 = "1 22 13 42 451 66 7 8 1999"
 L1 = [int(x) for x in s1.split(" ")]
 
-
 del L1, s1
 
 # *************************************************************************
@@ -135,5 +128,3 @@ del L1, s1
 D1 = {"temp": str(28), "humid": str(77), "pres": str(1066)}
 s1 = "Local Weather: Temperature: {temp}, Humidity: {humid}, Pressure: {pres}"
 s1.format(**D1)
-
-

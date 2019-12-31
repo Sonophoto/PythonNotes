@@ -2,9 +2,9 @@
 
 #### Lookup weather online with automatic IP locating
 
-Returns Python dicts from JSON objects or 'None' 
+Returns Python dicts from JSON objects or 'None'
 
-If there is any type of failure, it does not return any 
+If there is any type of failure, it does not return any
 diagnostic information on purpose. All the author needed
 to know is 'It ain't there'
 
@@ -22,6 +22,6 @@ Unit Tests:
 
         We can look-up Forecast for Local Weather.
 
-Originally inspired by weathercli written by Corey Goldberg, 2016 
+Originally inspired by weathercli written by Corey Goldberg, 2016
 https://github.com/cgoldberg/weathercli                @cgoldberg
 

@@ -2,7 +2,7 @@
 
 """
  Generate random triples of values for testing gcd_euclid() and gcd_lame()
- 
+
  Implementation (c) 2016,2017 Brig Young (github.com/Sonophoto)
  License: BSD-2c, i.e. Cite.
 """

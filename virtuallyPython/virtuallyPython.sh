@@ -9,7 +9,7 @@
 #
 # Copyright: 2016,2017 Brig Young, Sonophoto Studios
 # License:   BSD 2-Clause: If you use it, cite it! --thanks.
-# See LICENSE file: https://github.com/Sonophoto/PythonNotes/LICENSE 
+# See LICENSE file: https://github.com/Sonophoto/PythonNotes/LICENSE
 #
 
 
@@ -42,12 +42,12 @@ alias_py3global="py3g"
 check_dependencies () {
    #TODO Add tests for Python2 and Python3
    echo "Checking for virtualenv and version number"
-   virtualenv --version 
+   virtualenv --version
    if [ $? != 0 ]
    then
       User_Response=""
       echo "virtualenv is NOT installed. Shall we install it? (yes or no)"
-      read User_Response 
+      read User_Response
       echo "Got a User_Response of $User_Response"
       case "$User_Response" in
          [Yy]*)
@@ -69,7 +69,7 @@ print_usage () {
 cat << EOF
 Warning: Paths in this script must be ported on non-ubuntu based systems
 
-Usage: ./virtuallyPython.sh [--alias | --help] 
+Usage: ./virtuallyPython.sh [--alias | --help]
 
 No Options: creates and initializes all four virtual environments for manual usage.
 
@@ -96,7 +96,7 @@ EOF
 
 
 create_virtual_envs () {
-   virtualenv --prompt=$prompt_v27s --python=$python27_path $dir_py27slick 
+   virtualenv --prompt=$prompt_v27s --python=$python27_path $dir_py27slick
    virtualenv --prompt=$prompt_v3s --python=$python3_path $dir_py3slick
    virtualenv --system-site-packages --prompt=$prompt_v27g --python=$python27_path $dir_py27global
    virtualenv --system-site-packages --prompt=$prompt_v3g --python=$python3_path $dir_py3global
@@ -106,8 +106,8 @@ create_virtual_envs () {
 create_aliases () {
    # NOTE you cannot put these in a shell script, it must be sourced in process!
    echo "alias $alias_py27slick='source $dir_py27slick/bin/activate'" >> ~/.bashrc
-   echo "alias $alias_py3slick='source $dir_py3slick/bin/activate'" >> ~/.bashrc  
-   echo "alias $alias_py27global='source $dir_py27global/bin/activate'" >> ~/.bashrc 
+   echo "alias $alias_py3slick='source $dir_py3slick/bin/activate'" >> ~/.bashrc
+   echo "alias $alias_py27global='source $dir_py27global/bin/activate'" >> ~/.bashrc
    echo "alias $alias_py3global='source $dir_py3global/bin/activate'" >> ~/.bashrc
    echo "alias dvirt='deactivate'" >> ~/.bashrc
    echo ""
@@ -146,7 +146,7 @@ then
       create_aliases
       exit 0
 
-   else # Bad Argument     
+   else # Bad Argument
       echo "***** ERROR! *****"
       echo "Not Running: Bad Argument = $1"
       print_usage

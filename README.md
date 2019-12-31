@@ -5,7 +5,7 @@ Many of my notes from learning to use Python, in the likely case that I forget..
 
 ### [WeatherLookup](https://github.com/Sonophoto/PythonNotes/tree/master/weatherLookup):
 Example of how to use a [REST API](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm) from Python. Tests included.
-    
+
 ### [VirtuallyPython](https://github.com/Sonophoto/PythonNotes/tree/master/virtuallyPython):
 A Bourne shell script that automagically creates virtual environments for Python and Python3.
 
@@ -29,5 +29,5 @@ Generates text tuples of warm and cool colours from the set ("red", "orange", "y
 Notes on various methods for manipulating strings with slices in a question and answer format.
 
 ### [Ternary Madness and Indexed Tuples](https://github.com/Sonophoto/PythonNotes/blob/master/TernaryMadnessAndIndexedTuples.py):
-Several approaches to using the Ternary conditional construct with references and iterating through lists of references. 
+Several approaches to using the Ternary conditional construct with references and iterating through lists of references.
 
