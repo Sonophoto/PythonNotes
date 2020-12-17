@@ -127,3 +127,9 @@ directory and then deactivate it before moving to the next project. You can of c
 
 
 # Enjoy! It Works Great!
+
+### Warning to Students:
+
+Do Not cheat on your homework, you are really only cheating yourself -- If you are caught you may be expelled from school:
+
+[MOSS: Measure of Software Similarity (Stanford)](http://theory.stanford.edu/~aiken/moss/)
