@@ -25,3 +25,10 @@ Unit Tests:
 Originally inspired by weathercli written by Corey Goldberg, 2016
 https://github.com/cgoldberg/weathercli                @cgoldberg
 
+### Warning to Students:
+
+Do Not cheat on your homework, you are really only cheating yourself -- If you are caught you may be expelled from school:
+
+[MOSS: Measure of Software Similarity (Stanford)](http://theory.stanford.edu/~aiken/moss/)
+
+
