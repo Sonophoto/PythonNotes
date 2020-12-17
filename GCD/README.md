@@ -18,3 +18,11 @@ gcd(0, 0) returns 0.
 
 ##### NOTE: Concrete Math, Graham, Knuth, Patashnik, pp. 103:
 says gcd(0,0) is undefined, i.e. gcd(0,0):return NaN
+
+### Warning to Students:
+
+Do Not cheat on your homework, you are really only cheating yourself -- If you are caught you may be expelled from school:
+
+[MOSS: Measure of Software Similarity (Stanford)](http://theory.stanford.edu/~aiken/moss/)
+
+
