@@ -1,10 +1,11 @@
 # Primal Python 
 
-##### NOTE: This is an in progress personal project for my own amusement. There is one useful function in primalPython.py as I write this. Started June 2020. Anticipated completion date August 2020.
+##### NOTE: This is an in progress personal project for my own amusement. There is one useful function in primalPython.py as I write this. Started June 2020. Anticipated completion date January 2021.
 
 A variety of methods for calculating our favourite irrational number and related sets. Unit tests included.
 
 ### Special thanks to:
+Alexandria - The Russian Hottie.
 
 
 ### Usage:
