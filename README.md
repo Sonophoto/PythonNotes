@@ -12,8 +12,8 @@ A Bourne shell script that automagically creates virtual environments for Python
 ### [Fibonacci](https://github.com/Sonophoto/PythonNotes/tree/master/fibonacci): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes/fibonacci)
 A variety of methods for calculating our favourite integer sequence. Unit tests included.
 
-### [Primal Python](https://github.com/Sonophoto/PythonNotes/tree/master/primalPython): 
-A work in progress this project contains a number of routines for finding primes (This is not cutting edge mathematics ;-)
+### [Primal Python](https://github.com/Sonophoto/PythonNotes/tree/master/primalPython): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes/primalPython)
+(Work in progress) A variety of methods for testing primality of numbers using number theory. Unit tests included.
 
 ### [Greatest Common Divisor](https://github.com/Sonophoto/PythonNotes/tree/master/GCD): [![Build Status](https://travis-ci.org/Sonophoto/PythonNotes.svg?branch=master)](https://travis-ci.org/Sonophoto/PythonNotes/GCD)
 Quite possibly the oldest algorithm known to modern man. Unit tests included.
