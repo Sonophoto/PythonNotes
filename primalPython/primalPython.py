@@ -22,20 +22,19 @@ def digitalRoot(number):
         a single digit. Tested against 710 digit 9s, only two recursions.
     """
     # Validate Input
-    if type(number) == str:                                            
+    if type(number) == str:         # If it is a string, make sure it is digits 
         if isdigit(number): number
-        else
+        else:
             print("Verify that your imput consists of the digits 0 thru 9. Your input: ", number)
             return -1 #Bad Input
-    elif type(number) == int:
+    elif type(number) == int:       # It is an integer value, convert to string
         number = str(number)
-    else: return -1 # Bad Input
 
     # Generate Output 
     digit_sum = 0
-    for c in in_val: digit_sum += int(c)
+    for c in number: digit_sum += int(c) # Total up the digits in string
     if digit_sum < 10:
         return digit_sum
-    elif digit_sum >= 10: # We still have more than one digit, recurse.
+    elif digit_sum >= 10:                # We have more than one digit, recurse.
         return digitalRoot(digit_sum)
 
