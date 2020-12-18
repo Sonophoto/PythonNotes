@@ -16,7 +16,7 @@
 from math import sqrt
 from functools import wraps
 
-def sumDigits(number):
+def digitalRoot(number):
     """ Takes a single value "number" as type(int) or type(str) and sums
         the digits. Recurses as required to reduce very large numbers to
         a single digit. Tested against 710 digit 9s, only two recursions.
@@ -37,5 +37,5 @@ def sumDigits(number):
     if digit_sum < 10:
         return digit_sum
     elif digit_sum >= 10: # We still have more than one digit, recurse.
-        return sumDigits(digit_sum)
+        return digitalRoot(digit_sum)
 
