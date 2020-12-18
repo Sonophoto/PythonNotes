@@ -17,24 +17,40 @@ from math import sqrt
 from functools import wraps
 
 def digitalRoot(number):
-    """ Takes a single value "number" as type(int) or type(str) and sums
-        the digits. Recurses as required to reduce very large numbers to
-        a single digit. Tested against 710 digit 9s, only two recursions.
+    """ Takes a single value "number" as type(int) or type(str) and 
+        calculates the digital root. Recurses as needed to reduce 
+        digital_root to a single digit.
+        See: https://oeis.org/A010888 for more on digital roots.
+    """
+    number = _validate(number)
+    digital_root = 0
+    for c in number: digital_root += int(c) 
+    if digital_root < 10:
+        return digital_root
+    elif digital_root >= 10:                # We have more than one digit, recurse
+        return digitalRoot(digital_root)
+
+
+def digitalSum(number):
+    """ Takes a single value "number" as type(int) of type(str) and sums
+        the digits to a multi-digit digital sum.
+    """
+    number = _validate(number)
+    digital_sum = 0
+    for c in number: digital_sum += int(c)
+    return digital_sum
+
+
+def _validate(number):
+    """ Verify that returned value is valid string representation of an
+        integer value or error.
     """
     # Validate Input
-    if type(number) == str:         # If it is a string, make sure it is digits 
+    if type(number) == str:      # If it is a string, make sure it is digits 
         if isdigit(number): number
         else:
             print("Verify that your imput consists of the digits 0 thru 9. Your input: ", number)
             return -1 #Bad Input
-    elif type(number) == int:       # It is an integer value, convert to string
+    elif type(number) == int:    # It is an integer value, convert to string
         number = str(number)
-
-    # Generate Output 
-    digit_sum = 0
-    for c in number: digit_sum += int(c) # Total up the digits in string
-    if digit_sum < 10:
-        return digit_sum
-    elif digit_sum >= 10:                # We have more than one digit, recurse.
-        return digitalRoot(digit_sum)
-
+    return number
