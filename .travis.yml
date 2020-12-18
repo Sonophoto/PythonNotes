@@ -9,5 +9,7 @@ script:
 
 - python3 fibonacci/test_fibonacci.py
 
+- python3 primalPython/test_primalPython.py
+
 
 
