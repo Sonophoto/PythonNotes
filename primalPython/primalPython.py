@@ -50,8 +50,8 @@ def pyPrimeFinder(number):
             print(n, 'equals', x, '*', n//x)
             break
       else:
-      # loop fell through without finding a factor
-      print(n, 'is a prime number')
+         # loop fell through without finding a factor
+         print(n, 'is a prime number')
 
 def _validate(number):
     """ Verify that returned value is valid string representation of an
