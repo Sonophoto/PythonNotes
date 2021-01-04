@@ -9,7 +9,7 @@ As of 15-Dec-2020 I have two functions up and working with tests:
 Next I will implement some functions for testing divisibility by certain digits
 
 ### Special thanks to:
-Alexandria - The Russian Hottie.
+Посвящается русской красавице Александре.
 
 
 ### Usage:
