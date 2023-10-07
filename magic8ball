@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+# Trivial Code given to the Public Domain
+# Brig Young, October 2023
+
+import secrets
+import argparse
+parser = argparse.ArgumentParser(prog='magic8ball',
+        description="Answers 'Yes' or 'No' questions using the magic of secrets.\
+                Consider your question, type 'magic8ball', FOCUS and then press [enter].",
+        epilog="Created by Sonophoto on Github, 2023")
+parser.parse_args()
+
+EightBall = [\
+"Yes, in due time.",\
+"My sources say no.",\
+"Definitely not.",\
+"Yes.",\
+"You will have to wait.",\
+"I have my doubts.",\
+"Outlook is so so.",\
+"Looks good to me!",\
+"Who knows?",\
+"Looking good!",\
+"Probably.",\
+"Are you kidding?",\
+"Go for it!",\
+"Don't bet on it.",\
+"Forget about it.",\
+]
+print(secrets.choice(EightBall)
