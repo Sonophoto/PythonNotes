@@ -34,6 +34,6 @@ Notes on various methods for manipulating strings with slices in a question and 
 ### [Ternary Madness and Indexed Tuples](https://github.com/Sonophoto/PythonNotes/blob/master/TernaryMadnessAndIndexedTuples.py):
 Several approaches to using the Ternary conditional construct with references and iterating through lists of references.
 
-### [Magic 8-Ball] (https://github.com/Sonophoto/PythonNotes/blob/master/magic8ball):
+### [Magic 8-Ball](https://github.com/Sonophoto/PythonNotes/blob/master/magic8ball):
 A simulation of a well known fortune teller using the `secrets` module in `python3` to reveal mystical secrets of timing.
 
